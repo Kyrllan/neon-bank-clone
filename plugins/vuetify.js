@@ -13,9 +13,10 @@ const defaultTheme = {
     nBlack: '#000000',
     nLightBlue: '#AAD7E6',
     nBlue: '#0F92FF',
-    nCyan: '#00FFEF',
+    nCyan: '#00FFF0',
     nLime: '#C3FF3C',
     nYellow: '#FFC800',
+    error: '#EB000C'
   },
 };
 

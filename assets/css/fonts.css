@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'Moranga-Black';
+  src: url('../fonts/Moranga-Black.otf') format('truetype');
+}
+@font-face {
+  font-family: 'Moranga-Bold';
+  src: url('../fonts/Moranga-Bold.otf') format('truetype');
+}
+@font-face {
+  font-family: 'Moranga-Light';
+  src: url('../fonts/Moranga-Light.otf') format('truetype');
+}
+@font-face {
+  font-family: 'Moranga-Medium';
+  src: url('../fonts/Moranga-Medium.otf') format('truetype');
+}
+@font-face {
+  font-family: 'Moranga-Regular';
+  src: url('../fonts/Moranga-Regular.otf') format('truetype');
+}

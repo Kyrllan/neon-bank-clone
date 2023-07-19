@@ -20,6 +20,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/vue-fontawesome": "^3.0.3",
     "@mdi/font": "^7.2.96",
+    "maska": "^2.1.9",
     "sass": "^1.63.6",
     "vuetify": "^3.3.9"
   }

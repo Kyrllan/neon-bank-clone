@@ -3,7 +3,9 @@ export default defineNuxtConfig({
   devtools: {enabled: true},
   css: [
     'vuetify/lib/styles/main.sass',
+    '@mdi/font/css/materialdesignicons.min.css',
     '@fortawesome/fontawesome-svg-core/styles.css',
+    '@/assets/css/fonts.css',
   ],
   build: {
     transpile: [

@@ -4,11 +4,7 @@
       <template v-slot:activator="{props}">
         <div class="menu-title" v-bind="props">
           <span class="mr-2 text-decoration">{{ name }}</span>
-          <font-awesome-icon
-            class="rotate-icon"
-            icon="chevron-down"
-            size="md"
-          />
+          <font-awesome-icon class="rotate-icon" icon="chevron-down" />
         </div>
       </template>
 
