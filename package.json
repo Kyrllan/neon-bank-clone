@@ -6,7 +6,9 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "deploy": "gh-pages -d .nuxt/dist",
+    "predeploy": "nuxt build"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
