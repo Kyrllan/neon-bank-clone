@@ -15,7 +15,7 @@ const defaultTheme = {
     nBlue: '#0F92FF',
     nCyan: '#00FFEF',
     nLime: '#C3FF3C',
-    nYellow: '#E6B400',
+    nYellow: '#FFC800',
   },
 };
 

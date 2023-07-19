@@ -1,9 +1,9 @@
 <template>
   <div class="text-center">
-    <v-menu open-on-hover>
+    <v-menu open-on-hover open-delay="50" close-delay="50">
       <template v-slot:activator="{props}">
-        <div class="menu-title">
-          <span class="mr-2 text-decoration" v-bind="props">{{ name }}</span>
+        <div class="menu-title" v-bind="props">
+          <span class="mr-2 text-decoration">{{ name }}</span>
           <font-awesome-icon
             class="rotate-icon"
             icon="chevron-down"
@@ -46,9 +46,9 @@ const props = defineProps({
   font-family: 'Epilogue';
 
   .rotate-icon {
-    -webkit-transition: 0.5s ease-out;
-    -moz-transition: 0.5s ease-out;
-    transition: 0.5s ease-out;
+    -webkit-transition: 0.3s ease-out;
+    -moz-transition: 0.3s ease-out;
+    transition: 0.3s ease-out;
   }
   .text-decoration {
     text-decoration: none;
@@ -56,6 +56,7 @@ const props = defineProps({
   }
 
   &:hover {
+    padding-bottom: 2px;
     .text-decoration::after {
       content: '';
       position: absolute;
