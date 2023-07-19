@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-app",
+  "name": "neon-bank-clone",
   "private": true,
   "scripts": {
     "build": "nuxt build",
