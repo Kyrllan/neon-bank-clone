@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div @click="collapseToggle()" class="title">{{ name }}<v-spacer></v-spacer>
+    <div @click="collapsed = !collapsed" class="title">{{ name }}<v-spacer></v-spacer>
       <font-awesome-icon :icon="collapsed ? 'chevron-up' : 'chevron-down'" />
     </div>
     <v-list v-show="collapsed" style="width:100%">
@@ -32,11 +32,6 @@ const props = defineProps({
 });
 
 let collapsed = ref(false);
-
-function collapseToggle() {
-  this.collapsed = !this.collapsed
-}
-
 
 </script>
 
