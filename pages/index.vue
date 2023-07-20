@@ -28,7 +28,9 @@
             v-maska
             data-maska="###.###.###-##"
             prepend-inner-icon="mdi-card-account-details-outline"
-            :append-inner-icon="rules.cpfValid(cpf) ? '' : 'mdi-alert-circle'"
+            :append-inner-icon="
+              rules.cpfValid(cpf) || cpf.length <= 0 ? '' : 'mdi-alert-circle'
+            "
           >
           </v-text-field>
           <v-btn
@@ -107,7 +109,7 @@ const rules = {
         color: rgb(var(--v-theme-nText));
       }
 
-      .open-account-field .v-text-field__slot {
+      .open-account-field {
         max-width: 246px;
         border-radius: 10px;
       }
