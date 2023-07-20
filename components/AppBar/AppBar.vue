@@ -3,10 +3,7 @@
     <div class="header-content">
       <img class="neon-logo" width="92" height="20" src="/assets/logo-azul.svg" alt="neon-logo" />
       <div class="nav-list">
-        <app-bar-menu class="ml-4" name="Cartões" :items="cardList" />
-        <app-bar-menu class="ml-4" name="Produtos" :items="productList" />
-        <app-bar-menu class="ml-4" name="A Neon" :items="neonList" />
-        <app-bar-menu class="ml-4" name="Para MEIs" :items="meiList" />
+        <app-bar-menu v-for="(item, i) in menuList" :key="i" class="ml-4" :name="item.name" :items="item.list" />
         <app-bar-item class="ml-4" name="Perguntas"></app-bar-item>
         <app-bar-item class="ml-4" name="Blog"></app-bar-item>
         <v-btn class="ml-4 open-account-btn" height="40" rounded="xl">Abra sua conta</v-btn>
@@ -21,7 +18,9 @@
     <v-dialog v-model="menuDialog" persistent fullscreen style="z-index: 10">
       <v-card>
         <div class="px-4" style="margin-top: 80px">
-
+          <MenuMobile v-for="(item, i) in menuList" :key="i" class="ml-4" :name="item.name" :items="item.list" />
+          <MenuMobileItem name="Perguntas" />
+          <MenuMobileItem name="Blog" />
           <v-btn class="mt-4 open-account-btn" flat block height="40" rounded="xl">Abra sua conta</v-btn>
         </div>
       </v-card>
@@ -31,90 +30,108 @@
 </template>
 
 <script setup>
+import MenuMobile from './MenuMobile.vue';
+import MenuMobileItem from './MenuMobileItem.vue';
+
+components: {
+  MenuMobile,
+    MenuMobileItem
+}
+
 import { ref } from 'vue'
 
 const menuDialog = ref(false)
 
+const menuList = [
+  {
+    name: 'Cartões', list: [
+      {
+        title: 'Cartão de crédito',
+        description: 'Sem anuidade e sem complicação.',
+        new: false
+      },
+      {
+        title: 'Cashback',
+        description: 'Dinheiro de volta nas suas compras.',
+        new: false
+      },
+      {
+        title: 'Viracrédito',
+        description: 'Investimento que vira limite.',
+        new: true
+      },
+      {
+        title: 'Cartão de débito',
+        description: 'Sem taxas e internacional.',
+        new: false
+      },
+      {
+        title: 'Cartão virtual',
+        description: 'Seguro para compras online.',
+        new: false
+      },
+    ]
+  },
+  {
+    name: 'Produtos', list: [
+      {
+        title: 'Empréstimos',
+        description: 'Simule e conheça as taxas.',
+        new: false
+      },
+      {
+        title: 'Empréstimo Consignado',
+        description: 'As menores taxas do mercado.',
+        new: false
+      },
+      {
+        title: 'Antecipação de FGTS',
+        description: 'Saiba como contratar a antecipação',
+        new: true
+      },
+      {
+        title: 'Conta digital',
+        description: 'Sem annuidade e sem tarifas.',
+        new: false
+      },
+      {
+        title: 'Investimentos',
+        description: 'Seguros, práticos e simples.',
+        new: false
+      },
+    ]
+  },
+  {
+    name: 'A Neon', list: [
+      {
+        title: 'Sobre nós',
+        description: 'Descrubra quem é a Neon!',
+        new: false
+      },
+      {
+        title: 'Carreira',
+        description: 'Confira nossas vagas abertas.',
+        new: false
+      },
+    ]
+  },
+  {
+    name: "Para MEIs", list: [
+      {
+        title: 'Conheça a MEI Fácil',
+        description: 'Descrubra quem é a MEI Fácil!',
+        new: false
+      },
+      {
+        title: 'Abra Mei',
+        description: 'É rápido, fácil  gratuito!',
+        new: false
+      },
+    ]
+  }
+]
 
 
-const cardList = [
-  {
-    title: 'Cartão de crédito',
-    description: 'Sem anuidade e sem complicação.',
-    new: false
-  },
-  {
-    title: 'Cashback',
-    description: 'Dinheiro de volta nas suas compras.',
-    new: false
-  },
-  {
-    title: 'Viracrédito',
-    description: 'Investimento que vira limite.',
-    new: true
-  },
-  {
-    title: 'Cartão de débito',
-    description: 'Sem taxas e internacional.',
-    new: false
-  },
-  {
-    title: 'Cartão virtual',
-    description: 'Seguro para compras online.',
-    new: false
-  },
-]
-const productList = [
-  {
-    title: 'Empréstimos',
-    description: 'Simule e conheça as taxas.',
-    new: false
-  },
-  {
-    title: 'Empréstimo Consignado',
-    description: 'As menores taxas do mercado.',
-    new: false
-  },
-  {
-    title: 'Antecipação de FGTS',
-    description: 'Saiba como contratar a antecipação',
-    new: true
-  },
-  {
-    title: 'Conta digital',
-    description: 'Sem annuidade e sem tarifas.',
-    new: false
-  },
-  {
-    title: 'Investimentos',
-    description: 'Seguros, práticos e simples.',
-    new: false
-  },
-]
-const neonList = [
-  {
-    title: 'Sobre nós',
-    description: 'Descrubra quem é a Neon!',
-    new: false
-  },
-  {
-    title: 'Carreira',
-    description: 'Confira nossas vagas abertas.',
-    new: false
-  },
-]
-const meiList = [
-  {
-    title: 'Conheça a MEI Fácil',
-    description: 'Descrubra quem é a MEI Fácil!',
-    new: false
-  },
-  {
-    title: 'Abra Mei',
-    description: 'É rápido, fácil  gratuito!',
-    new: false
-  },
-]
 </script>
 
 <style scoped lang="scss">
