@@ -1,53 +1,84 @@
 <template>
   <div>
     <section class="first-home-section background-picture">
-      <v-container class="first-home-container">
+      <div class="first-home-container">
         <div class="first-home-section-card">
           <div class="first-home-section-card-title">
-            <span
-              >Neon, a conta digital feita para os brasileiros
-              <span class="highlight-text">trabalhadores</span></span
-            >
+            <span>Neon, a conta digital feita para os brasileiros
+              <span class="highlight-text">trabalhadores</span></span>
           </div>
           <div class="first-home-section-card-text">
-            <span
-              >Leve com você onde for:
-              <strong
-                >Cartão de Crédito, Débito, Empréstimo, Investimentos,
-                Cashback</strong
-              >
-              e muito mais!</span
-            >
+            <span>Leve com você onde for:
+              <strong>Cartão de Crédito, Débito, Empréstimo, Investimentos,
+                Cashback</strong>
+              e muito mais!</span>
           </div>
-          <v-text-field
-            v-model="cpf"
-            class="open-account-field"
-            label="Digite seu CPF"
-            variant="outlined"
-            :rules="[rules.cpf]"
-            v-maska
-            data-maska="###.###.###-##"
-            prepend-inner-icon="mdi-card-account-details-outline"
-            :append-inner-icon="
-              rules.cpfValid(cpf) || cpf.length <= 0 ? '' : 'mdi-alert-circle'
-            "
-          >
+          <v-text-field v-model="cpf" class="open-account-field" label="Digite seu CPF" variant="outlined"
+            :rules="[rules.cpf]" v-maska data-maska="###.###.###-##" prepend-inner-icon="mdi-card-account-details-outline"
+            :append-inner-icon="rules.cpfValid(cpf) || cpf.length <= 0 ? '' : 'mdi-alert-circle'
+              ">
           </v-text-field>
-          <v-btn
-            variant="flat"
-            class="open-account-btn"
-            height="40"
-            rounded="xl"
-            >Abra sua conta</v-btn
-          >
+          <v-btn variant="flat" class="open-account-btn" height="40" rounded="xl">Abra sua conta</v-btn>
         </div>
-      </v-container>
+      </div>
+    </section>
+    <section class="second-home-section">
+      <div class="banner-content">
+        <ul class="second-banner-list">
+          <li>
+            <div class="banner-card banner-img-1">
+              <div>
+                <span class="banner-text banner-text-1">Cartão</span> <br>
+                <div class="mt-4 banner-text banner-text-1">de Crédito</div>
+                <div class="more">Saiba mais</div>
+              </div>
+            </div>
+            <div>
+              <div class="banner-main-text">Mais controle</div>
+              <p class="banner-main-text-1">
+                Com o <span class="banner-text-main-decoration">Cartão de Crédito</span> Neon você só paga o que gasta e
+                pode ajustar seu próprio limite.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="banner-card banner-img-2">
+              <div>
+                <span class="banner-text banner-text-2">Empréstimo</span>
+                <div class="more">Saiba mais</div>
+              </div>
+            </div>
+            <div>
+              <div class="banner-main-text">Conquiste seus sonhos</div>
+              <p class="banner-main-text-1">
+                O jeito Neon de fazer acontecer, te adianta um <span class="banner-text-main-decoration">empréstimo
+                  pessoal</span> com as menores taxas.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="banner-card banner-img-3">
+              <div>
+                <span class="banner-text banner-text-3">Investimentos</span>
+                <div class="more">Saiba mais</div>
+              </div>
+            </div>
+            <div>
+              <div class="banner-main-text">Seu dinheiro rende</div>
+              <p class="banner-main-text-1">
+                Dinheiro rendendo de verdade, com praticidade e segurança, só na Neon. <span
+                  class="banner-text-main-decoration">Faça sua simulação!</span>
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
     </section>
   </div>
 </template>
 
 <script setup>
-import {ref, computed} from 'vue';
+import { ref } from 'vue';
 
 const cpf = ref('');
 
@@ -73,11 +104,13 @@ const rules = {
   background-repeat: no-repeat;
   background-size: auto 100%;
   background-position: center;
+  padding: 0 7rem;
 
   .first-home-container {
     height: 100%;
     display: flex;
     align-items: center;
+
     .first-home-section-card {
       max-width: 419px;
       background-color: rgb(var(--v-theme-nWhite));
@@ -100,6 +133,7 @@ const rules = {
           margin-left: -5px;
         }
       }
+
       .first-home-section-card-text {
         font-family: 'Epilogue';
         font-weight: 500;
@@ -128,21 +162,166 @@ const rules = {
   }
 }
 
+.second-home-section {
+  background-color: rgb(var(--v-theme-nWhite));
+  padding: 0 7rem;
+
+  .banner-content {
+    padding: 60px 100px;
+
+    .second-banner-list {
+      list-style-type: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      li {
+        max-width: 284px;
+      }
+
+      .banner-card {
+        width: 284px;
+        height: 282px;
+        border-radius: 59px 59px 59px 10px;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        //align-items: end;
+        justify-content: center;
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        background-position: center;
+
+        .more {
+          text-align: center;
+          font-size: 20px;
+          font-weight: bold;
+          font-family: 'Epilogue';
+          letter-spacing: normal;
+          padding-bottom: 4px;
+          text-decoration: underline;
+          color: #fff;
+          opacity: 0;
+          transition: ease-out .2s;
+        }
+
+        &:hover {
+          cursor: pointer;
+          opacity: 0.8;
+
+          .more {
+            opacity: 1;
+          }
+        }
+      }
+
+      .banner-img-1 {
+        background-image: url('/assets/varias-maos-segurando-cartoes-da-neon-284x282.webp');
+      }
+
+      .banner-img-2 {
+        background-image: url('/assets/senhor-de-idade-segurando-celular-e-cartao-neon-284x282.webp');
+      }
+
+      .banner-img-3 {
+        background-image: url('/assets/homem-na-rua-olhando-para-frente-284x282.webp');
+      }
+
+      .banner-text {
+        padding: 0 12px;
+        border-radius: 100px;
+        font-family: Moranga-Medium, Helvetica, sans-serif;
+        font-size: 36px;
+        font-weight: 500;
+      }
+
+      .banner-text-1 {
+        background-color: rgb(var(--v-theme-nLime));
+      }
+
+      .banner-text-2 {
+        background-color: rgb(var(--v-theme-nCyan));
+      }
+
+      .banner-text-3 {
+        background-color: rgb(var(--v-theme-nLightBlue));
+      }
+
+      .banner-main-text {
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: 'Epilogue';
+        letter-spacing: normal;
+        margin: 16px 20px;
+        color: rgb(var(--v-theme-nBlack));
+      }
+
+      .banner-main-text-1 {
+        font-family: 'Epilogue';
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        color: rgb(var(--v-theme-nBlack));
+      }
+
+      .banner-text-main-decoration {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+
+  }
+
+}
+
 @media screen and (max-width: 3000px) {
   .background-picture {
     background-image: url('/assets/hero-2-1920x568.webp');
   }
 }
 
+@media screen and (max-width: 1400px) {
+  .second-home-section {
+    padding: 0 2rem;
+  }
+}
+
+
 @media screen and (max-width: 1024px) {
   .background-picture {
     background-image: url('/assets/hero-2-1024x568.webp');
   }
+
+  .first-home-section {
+    padding: 0 1rem;
+  }
+
+  .second-home-section {
+    .second-banner-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      li {
+        padding: 2rem 0;
+      }
+    }
+  }
+
 }
 
 @media screen and (max-width: 520px) {
+
   .background-picture {
     background-image: url('/assets/hero-2-520x610.webp');
   }
+
+  .first-home-section {
+    padding: 0;
+  }
+
 }
 </style>
