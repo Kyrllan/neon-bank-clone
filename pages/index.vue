@@ -347,14 +347,14 @@ const rules = {
 
 
 
-@media screen and (min-width: 1401px) {
+@media screen and (max-width: 3000px) {
   .background-picture {
     background-image: url('/assets/hero-2-1920x568.webp');
   }
 
 }
 
-@media screen and (min-width: 1025px) and (max-width: 1400px) {
+@media screen and (max-width: 1400px) {
   .first-home-section {
     padding: 0 5rem;
   }
@@ -373,7 +373,7 @@ const rules = {
 }
 
 
-@media screen and (min-width: 521px) and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
   .background-picture {
     background-image: url('/assets/hero-2-1024x568.webp');
   }
