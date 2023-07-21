@@ -13,6 +13,7 @@ const defaultTheme = {
     nBlack: '#000000',
     nLightBlue: '#AAD7E6',
     nBlue: '#0F92FF',
+    nBlue2: '#428CD1',
     nCyan: '#00FFF0',
     nLime: '#C3FF3C',
     nYellow: '#FFC800',

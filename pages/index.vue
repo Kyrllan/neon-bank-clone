@@ -115,6 +115,7 @@
       </div>
     </section>
     <section class="sixth-home-section">
+      <h1 class="banner-title">Dúvidas Comuns:</h1>
       <ExpansionPanel :list="questions" />
     </section>
     <section class="seventh-home-section">
@@ -475,7 +476,17 @@ const questions = [
 }
 
 .sixth-home-section {
-  padding: 6rem;
+  padding: 2rem 20rem;
+
+  .banner-title {
+    font-family: Moranga-Medium, Helvetica, sans-serif;
+    font-size: 48px;
+    font-weight: normal;
+    line-height: 110%;
+    margin-bottom: 24px;
+    text-align: center;
+    color: rgb(var(--v-theme-nText));
+  }
 }
 
 .seventh-home-section {
@@ -544,6 +555,10 @@ const questions = [
     padding: 4rem;
   }
 
+  .sixth-home-section {
+    padding: 2rem 10rem;
+  }
+
   .background-picture {
     background-image: url('/assets/hero-2-1920x568.webp');
   }
@@ -595,12 +610,21 @@ const questions = [
     padding: 4rem;
   }
 
+  .sixth-home-section {
+    padding: 2rem;
+  }
+
   .seventh-home-section {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 2rem;
+
+
+    .banner {
+      padding: 0 1.5rem;
+    }
 
     .open-account-btn {
       display: none;
@@ -647,6 +671,9 @@ const questions = [
     padding: 2rem;
   }
 
+  .sixth-home-section {
+    padding: 2rem;
+  }
 
   .seventh-home-section {
     display: flex;
@@ -654,6 +681,10 @@ const questions = [
     align-items: center;
     justify-content: center;
     padding: 2rem;
+
+    .banner {
+      padding: 0 1rem;
+    }
 
     .open-account-btn {
       display: none;
