@@ -14,10 +14,12 @@ const defaultTheme = {
     nLightBlue: '#AAD7E6',
     nBlue: '#0F92FF',
     nBlue2: '#428CD1',
+    nBlue3: '#00233C',
     nCyan: '#00FFF0',
+    nCyan2: '#28cccc',
     nLime: '#C3FF3C',
     nYellow: '#FFC800',
-    error: '#EB000C'
+    error: '#EB000C',
   },
 };
 

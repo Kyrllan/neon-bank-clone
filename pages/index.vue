@@ -133,6 +133,19 @@
         <v-btn variant="flat" class="open-account-btn2" block height="40" rounded="xl">Confira os detalhes</v-btn>
       </div>
     </section>
+    <section class="eighth-home-section">
+      <div class="banner">
+        <div class="banner-title">Ei, já conhece o nosso blog?</div>
+        <div class="banner-text">Focar no Dinheiro é saber tudo sobre finanças pessoais, economia e controle dos gastos
+          para realizar seus
+          sonhos. Vem com a gente!</div>
+        <v-btn variant="flat" class="open-account-btn" block height="40" rounded="xl">Conheça o blog</v-btn>
+      </div>
+      <div class="banner2">
+        <div class="banner2-title">#Focanodinheiro</div>
+        <img class="banner2-img" src="/assets/ilustra-blog-min.webp" alt="ilustra-blog">
+      </div>
+    </section>
   </div>
 </template>
 
@@ -493,7 +506,7 @@ const questions = [
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4rem;
+  padding: 7rem 4rem;
   background-color: rgb(var(--v-theme-nLightBlue));
 
   .banner {
@@ -523,6 +536,71 @@ const questions = [
   .open-account-btn2 {
     @include account-btn;
     display: none;
+  }
+}
+
+.eighth-home-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+  background-color: rgb(var(--v-theme-nBlue3));
+
+  .banner {
+    max-width: 570px;
+    padding: 3rem;
+    margin: 0 1rem;
+    border-radius: 59px 59px 10px;
+    background-color: rgb(var(--v-theme-nCyan2));
+
+    .banner-title {
+      font-family: Moranga-Medium, Helvetica, sans-serif;
+      font-size: 48px;
+      font-weight: 500;
+      line-height: 110%;
+      margin-top: 24px;
+      margin-bottom: 24px;
+      color: rgb(var(--v-theme-nText));
+    }
+
+    .banner-text {
+      font-family: Epilogue, Helvetica, sans-serif;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 150%;
+      margin-bottom: 24px;
+      color: rgb(var(--v-theme-nText));
+    }
+
+    .open-account-btn {
+      @include account-btn;
+      display: inline-block;
+    }
+  }
+
+  .banner2 {
+    max-width: 570px;
+    padding: 1rem;
+    margin: 0 1rem;
+
+    .banner2-title {
+      border-radius: 40px 40px 40px 5px;
+      font-family: Moranga-Medium, Helvetica, sans-serif;
+      font-size: 3.125rem;
+      font-weight: 500;
+      line-height: 3.75rem;
+      padding: 10px;
+      margin-bottom: 20px;
+      text-align: center;
+      color: rgb(var(--v-theme-nText));
+      background-color: rgb(var(--v-theme-nWhite));
+    }
+
+    .banner2-img {
+      width: 100%;
+      height: 100%;
+      border-radius: 64px 64px 64px 10px;
+    }
   }
 }
 
@@ -635,6 +713,14 @@ const questions = [
     }
   }
 
+  .eighth-home-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+
 }
 
 @media screen and (max-width: 520px) {
@@ -692,6 +778,33 @@ const questions = [
 
     .open-account-btn2 {
       display: inline-block;
+    }
+  }
+
+  .eighth-home-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+
+    .banner {
+      max-width: 570px;
+      padding: 1.25rem;
+    }
+
+    .banner2 {
+      max-width: 570px;
+      padding: 1.25rem;
+
+      .banner2-title {
+        font-size: 2.5rem;
+        padding: 8px;
+        margin-bottom: 20px;
+        text-align: center;
+        color: rgb(var(--v-theme-nText));
+        background-color: rgb(var(--v-theme-nWhite));
+      }
     }
   }
 
