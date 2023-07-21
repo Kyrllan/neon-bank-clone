@@ -74,6 +74,20 @@
         </ul>
       </div>
     </section>
+    <section class="third-home-section">
+      <div class="pa-6">
+        <div class="banner-img"></div>
+      </div>
+      <div class="pa-6">
+        <div class="banner-main">
+          <div class="banner-title">Peça seu cartão Neon e juntos a gente descomplica o crédito</div>
+          <div class="banner-text">O cartão de crédito Neon é sem anuidade, você só paga o que gasta e pode ajustar seu
+            limite direto pelo
+            aplicativo.</div>
+          <v-btn variant="flat" class="open-account-btn" block height="40" rounded="xl">Pedir meu cartão</v-btn>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -97,6 +111,17 @@ const rules = {
 </script>
 
 <style scoped lang="scss">
+@mixin account-btn {
+  margin-top: 10px;
+  color: rgb(var(--v-theme-nBlack));
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Epilogue';
+  letter-spacing: normal;
+  text-transform: none;
+  background-color: rgb(var(--v-theme-nYellow));
+}
+
 .first-home-section {
   margin-top: 80px;
   height: 568px;
@@ -104,7 +129,7 @@ const rules = {
   background-repeat: no-repeat;
   background-size: auto 100%;
   background-position: center;
-  padding: 0 7rem;
+  padding: 0 18rem;
 
   .first-home-container {
     height: 100%;
@@ -149,14 +174,7 @@ const rules = {
       }
 
       .open-account-btn {
-        margin-top: 10px;
-        color: rgb(var(--v-theme-nBlack));
-        font-size: 16px;
-        font-weight: bold;
-        font-family: 'Epilogue';
-        letter-spacing: normal;
-        text-transform: none;
-        background-color: rgb(var(--v-theme-nYellow));
+        @include account-btn;
       }
     }
   }
@@ -164,7 +182,7 @@ const rules = {
 
 .second-home-section {
   background-color: rgb(var(--v-theme-nWhite));
-  padding: 0 7rem;
+  padding: 3rem 7rem;
 
   .banner-content {
     padding: 60px 100px;
@@ -277,20 +295,85 @@ const rules = {
 
 }
 
-@media screen and (max-width: 3000px) {
+.third-home-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(247.27deg, #00fff0 -19.61%, #0f92ff 164.78%) !important;
+  padding: 4rem 10rem;
+
+  .banner-img {
+    width: 554px;
+    height: 445px;
+    background-image: url('/assets/cartao-neon-min.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+
+  .banner-main {
+    max-width: 544px;
+
+    .banner-title {
+      font-family: Moranga-Medium, Helvetica, sans-serif;
+      font-size: 48px;
+      font-weight: 500;
+      line-height: 110%;
+      margin-bottom: 24px;
+      color: rgb(var(--v-theme-nText));
+    }
+
+    .banner-text {
+      font-family: Epilogue, Helvetica, sans-serif;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 150%;
+      margin-bottom: 24px;
+      color: rgb(var(--v-theme-nText));
+    }
+
+    .open-account-btn {
+      @include account-btn;
+    }
+  }
+
+}
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1401px) {
+  .background-picture {
+    background-image: url('/assets/hero-2-1920x568.webp');
+  }
+
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1400px) {
+  .first-home-section {
+    padding: 0 5rem;
+  }
+
+  .second-home-section {
+    padding: 0 2rem;
+  }
+
+  .third-home-section {
+    padding: 4rem;
+  }
+
   .background-picture {
     background-image: url('/assets/hero-2-1920x568.webp');
   }
 }
 
-@media screen and (max-width: 1400px) {
-  .second-home-section {
-    padding: 0 2rem;
-  }
-}
 
-
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 521px) and (max-width: 1024px) {
   .background-picture {
     background-image: url('/assets/hero-2-1024x568.webp');
   }
@@ -311,6 +394,14 @@ const rules = {
     }
   }
 
+  .third-home-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+  }
+
 }
 
 @media screen and (max-width: 520px) {
@@ -321,6 +412,14 @@ const rules = {
 
   .first-home-section {
     padding: 0;
+  }
+
+  .third-home-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
   }
 
 }
