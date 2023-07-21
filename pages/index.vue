@@ -114,6 +114,24 @@
         </div>
       </div>
     </section>
+    <section class="sixth-home-section">
+      <ExpansionPanel :list="questions" />
+    </section>
+    <section class="seventh-home-section">
+      <div class="banner">
+        <div class="banner-title">
+          Tarifas e anuidade?
+          Não com a Neon!
+        </div>
+        <div>
+          <v-btn variant="flat" class="open-account-btn" block height="40" rounded="xl">Confira os detalhes</v-btn>
+        </div>
+      </div>
+      <div class="banner">
+        <img class="banner-img" src="/assets/ilustra_gratis-min.webp" alt="gratis-img" />
+        <v-btn variant="flat" class="open-account-btn2" block height="40" rounded="xl">Confira os detalhes</v-btn>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -134,6 +152,24 @@ const rules = {
     return false;
   },
 };
+
+const questions = [
+  {
+    name: 'A Neon é um banco digital?',
+    description: `Não, a Neon não é um banco digital, por isso não dizemos "banco Neon", apenas "Neon". A Neon é uma Instituição de Pagamento autorizada pelo Banco Central do Brasil que oferece uma conta digital via aplicativo.
+    Também é possível dizer que a Neon é uma fintech, termo criado a partir da junção dos termos "financial" (financeiro) e "technology" (tecnologia), pois usamos tecnologia para promover inovação financeira.`,
+    link: 'Conheça mais sobre a Neon e a sua história.'
+  },
+  {
+    name: 'É seguro usar a conta Neon?',
+    description: `A conta digital Neon é 100% segura e estamos investindo continuamente em recursos para garantir a segurança dos nossos clientes. Por exemplo, disponibilizamos um cartão virtual para compras online, temos tokens em todos os processos de validação de segurança no aplicativo, além de autenticação por selfie e por digital para ter acesso à conta.`,
+  },
+  {
+    name: 'Por que escolher a conta digital Neon?',
+    description: `A Neon oferece todos os serviços financeiros que você precisa na palma da sua mão, além de ser uma conta gratuita e sem tarifas escondidas. Aqui você tem acesso ao cartão de crédito, empréstimo pessoal e consignado, investimento que rende mais do que a poupança, Viracrédito que pode aumentar o limite do seu cartão, cashback em todas as suas compras e muito mais!`,
+  },
+]
+
 </script>
 
 <style scoped lang="scss">
@@ -438,6 +474,47 @@ const rules = {
   }
 }
 
+.sixth-home-section {
+  padding: 6rem;
+}
+
+.seventh-home-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+  background-color: rgb(var(--v-theme-nLightBlue));
+
+  .banner {
+    max-width: 550px;
+    padding: 2rem;
+
+    .banner-title {
+      font-family: Moranga-Medium, Helvetica, sans-serif;
+      font-size: 48px;
+      font-weight: normal;
+      line-height: 110%;
+      margin-bottom: 24px;
+      color: rgb(var(--v-theme-nText));
+    }
+  }
+
+  .banner-img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .open-account-btn {
+    @include account-btn;
+    display: inline-block;
+  }
+
+  .open-account-btn2 {
+    @include account-btn;
+    display: none;
+  }
+}
+
 
 @media screen and (max-width: 3000px) {
   .background-picture {
@@ -458,9 +535,11 @@ const rules = {
   .third-home-section {
     padding: 4rem;
   }
+
   .fourth-home-section {
     padding: 4rem;
   }
+
   .fifth-home-section {
     padding: 4rem;
   }
@@ -516,6 +595,22 @@ const rules = {
     padding: 4rem;
   }
 
+  .seventh-home-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+
+    .open-account-btn {
+      display: none;
+    }
+
+    .open-account-btn2 {
+      display: inline-block;
+    }
+  }
+
 }
 
 @media screen and (max-width: 520px) {
@@ -550,6 +645,23 @@ const rules = {
     align-items: center;
     justify-content: center;
     padding: 2rem;
+  }
+
+
+  .seventh-home-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+
+    .open-account-btn {
+      display: none;
+    }
+
+    .open-account-btn2 {
+      display: inline-block;
+    }
   }
 
 }
