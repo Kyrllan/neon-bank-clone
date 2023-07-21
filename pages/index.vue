@@ -84,7 +84,7 @@
           <div class="banner-text">O cartão de crédito Neon é sem anuidade, você só paga o que gasta e pode ajustar seu
             limite direto pelo
             aplicativo.</div>
-          <v-btn variant="flat" class="open-account-btn" block height="40" rounded="xl">Pedir meu cartão</v-btn>
+          <v-btn @click="router.push('/bringCard')" variant="flat" class="open-account-btn" block height="40" rounded="xl">Pedir meu cartão</v-btn>
         </div>
       </div>
     </section>
@@ -94,7 +94,7 @@
           <div class="banner-title">Faça um empréstimo pessoal</div>
           <div class="banner-text">Tá faltando dinheiro pra fechar um projeto ou realizar um sonho? Que tal simular um
             empréstimo e ter uma ideia de quanto custaria?</div>
-          <v-btn variant="flat" class="open-account-btn" block height="40" rounded="xl">Simular empréstimo</v-btn>
+          <v-btn @click="router.push('/needLoan')" variant="flat" class="open-account-btn" block height="40" rounded="xl">Simular empréstimo</v-btn>
         </div>
       </div>
       <div class="pa-6">
@@ -110,7 +110,7 @@
           <div class="banner-title">Comece a investir a partir de R$ 10</div>
           <div class="banner-text">Juntar dinheiro e garantir seu futuro é simples na Neon. Nosso CDB é seguro, prático e
             rende mais do que a poupança. Simule agora um investimento e descubra quanto você ganharia.</div>
-          <v-btn variant="flat" class="open-account-btn" block height="40" rounded="xl">Simular investimento</v-btn>
+          <v-btn @click="router.push('/simulateInvestment')" variant="flat" class="open-account-btn" block height="40" rounded="xl">Simular investimento</v-btn>
         </div>
       </div>
     </section>
@@ -151,6 +151,8 @@
 
 <script setup>
 import { ref } from 'vue';
+
+const router = useRouter()
 
 const cpf = ref('');
 
@@ -197,6 +199,7 @@ const questions = [
   text-transform: none;
   background-color: rgb(var(--v-theme-nYellow));
 }
+
 
 .first-home-section {
   margin-top: 80px;

@@ -1,6 +1,6 @@
 <template>
   <v-app theme="defaultTheme">
     <AppBar />
-    <NuxtPage></NuxtPage>
+    <NuxtPage />
   </v-app>
 </template>
