@@ -76,7 +76,7 @@
     </section>
     <section class="third-home-section">
       <div class="pa-6">
-        <div class="banner-img"></div>
+        <img class="banner-img" src="/assets/cartao-neon-min.webp" alt="card-img" />
       </div>
       <div class="pa-6">
         <div class="banner-main">
@@ -85,6 +85,32 @@
             limite direto pelo
             aplicativo.</div>
           <v-btn variant="flat" class="open-account-btn" block height="40" rounded="xl">Pedir meu cartão</v-btn>
+        </div>
+      </div>
+    </section>
+    <section class="fourth-home-section">
+      <div class="pa-6">
+        <div class="banner-main">
+          <div class="banner-title">Faça um empréstimo pessoal</div>
+          <div class="banner-text">Tá faltando dinheiro pra fechar um projeto ou realizar um sonho? Que tal simular um
+            empréstimo e ter uma ideia de quanto custaria?</div>
+          <v-btn variant="flat" class="open-account-btn" block height="40" rounded="xl">Simular empréstimo</v-btn>
+        </div>
+      </div>
+      <div class="pa-6">
+        <img class="banner-img" src="/assets/emprestimo-min.webp" alt="card-img" />
+      </div>
+    </section>
+    <section class="fifth-home-section">
+      <div class="pa-6">
+        <img class="banner-img" src="/assets/investimento-min.webp" alt="card-img" />
+      </div>
+      <div class="pa-6">
+        <div class="banner-main">
+          <div class="banner-title">Comece a investir a partir de R$ 10</div>
+          <div class="banner-text">Juntar dinheiro e garantir seu futuro é simples na Neon. Nosso CDB é seguro, prático e
+            rende mais do que a poupança. Simule agora um investimento e descubra quanto você ganharia.</div>
+          <v-btn variant="flat" class="open-account-btn" block height="40" rounded="xl">Simular investimento</v-btn>
         </div>
       </div>
     </section>
@@ -303,12 +329,8 @@ const rules = {
   padding: 4rem 10rem;
 
   .banner-img {
-    width: 554px;
-    height: 445px;
-    background-image: url('/assets/cartao-neon-min.webp');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
+    width: 100%;
+    height: 100%;
   }
 
   .banner-main {
@@ -336,15 +358,85 @@ const rules = {
       @include account-btn;
     }
   }
-
 }
 
+.fourth-home-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(var(--v-theme-nWhite));
+  padding: 4rem 10rem;
 
+  .banner-img {
+    width: 100%;
+    height: 100%;
+  }
 
+  .banner-main {
+    max-width: 544px;
 
+    .banner-title {
+      font-family: Moranga-Medium, Helvetica, sans-serif;
+      font-size: 48px;
+      font-weight: 500;
+      line-height: 110%;
+      margin-bottom: 24px;
+      color: rgb(var(--v-theme-nText));
+    }
 
+    .banner-text {
+      font-family: Epilogue, Helvetica, sans-serif;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 150%;
+      margin-bottom: 24px;
+      color: rgb(var(--v-theme-nText));
+    }
 
+    .open-account-btn {
+      @include account-btn;
+    }
+  }
+}
 
+.fifth-home-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(var(--v-theme-nBackgroundPrimary));
+  padding: 4rem 10rem;
+
+  .banner-img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .banner-main {
+    max-width: 544px;
+
+    .banner-title {
+      font-family: Moranga-Medium, Helvetica, sans-serif;
+      font-size: 48px;
+      font-weight: 500;
+      line-height: 110%;
+      margin-bottom: 24px;
+      color: rgb(var(--v-theme-nText));
+    }
+
+    .banner-text {
+      font-family: Epilogue, Helvetica, sans-serif;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 150%;
+      margin-bottom: 24px;
+      color: rgb(var(--v-theme-nText));
+    }
+
+    .open-account-btn {
+      @include account-btn;
+    }
+  }
+}
 
 
 @media screen and (max-width: 3000px) {
@@ -364,6 +456,12 @@ const rules = {
   }
 
   .third-home-section {
+    padding: 4rem;
+  }
+  .fourth-home-section {
+    padding: 4rem;
+  }
+  .fifth-home-section {
     padding: 4rem;
   }
 
@@ -402,6 +500,22 @@ const rules = {
     padding: 4rem;
   }
 
+  .fourth-home-section {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+  }
+
+  .fifth-home-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+  }
+
 }
 
 @media screen and (max-width: 520px) {
@@ -419,7 +533,23 @@ const rules = {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 4rem;
+    padding: 2rem;
+  }
+
+  .fourth-home-section {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+
+  .fifth-home-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
   }
 
 }
