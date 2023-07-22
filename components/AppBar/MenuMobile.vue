@@ -17,7 +17,7 @@
 </template>
 
 <script setup>
-import { defineProps, ref } from 'vue';
+import { /* defineProps ,*/ ref } from 'vue';
 const props = defineProps({
   name: {
     type: String,
