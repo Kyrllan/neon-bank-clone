@@ -59,6 +59,7 @@
     justify-content: space-between;
     align-items: center;
     width: 250px;
+    cursor: pointer;
   }
 
   .download {
@@ -88,7 +89,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: rgb(var(--v-theme-nBlack));
-  
+
 }
 
 
@@ -106,6 +107,7 @@
     color: rgb(var(--v-theme-nWhite));
     width: 50%;
   }
+
   .bottom-text {
     font-family: 'Epilogue';
     line-height: 1.125rem;
@@ -114,5 +116,34 @@
     width: 50%;
   }
 }
+
+
+
+@media screen and (max-width: 1000px) {
+  .top-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .social {
+    padding: 2rem;
+  }
+
+  .download {
+    flex-direction: column;
+
+    .img-footer {
+      margin: 0.25rem;
+    }
+  }
+
+
+}
+
+@media screen and (max-width: 800px) {}
+
+@media screen and (max-width: 450px) {}
 </style>  
 
