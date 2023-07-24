@@ -1,63 +1,12 @@
-# Nuxt 3 Minimal Starter
+Este projeto é um clone da aplicação web de banco digital Neon, que visa reproduzir algumas funcionalidades e características dessa plataforma financeira inovadora. O Neon é conhecido por oferecer uma experiência bancária totalmente digital, sem agências físicas, e por fornecer aos seus clientes uma interface amigável e intuitiva.
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Tecnologias utilizadas:
+- Nuxt 3.6
+- Nuxt pages (Roteamento)
+- Vuetify 3
+- Sass com media queries para estilização e responsividade (web, tablet e mobile).
+- Integração com material design icons e fontawesome
+- Integração com google fonts
+- CI/CD com Vercel
 
-## Setup
-
-Make sure to install the dependencies:
-
-```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Nesse projeto busquei praticar minhas habilidades de criar um clone funcional. A ideia é disponibilizar o código-fonte no GitHub para que outras pessoas interessadas em desenvolvimento de aplicações web possam estudar e se inspirar no projeto. Vale ressaltar que esse projeto é apenas uma iniciativa educativa e não tem relação direta com o banco Neon ou suas operações oficiais.
