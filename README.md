@@ -1,7 +1,4 @@
-NEON BANK CLONE
-
-![Captura de Tela 2023-07-25 às 08 49 55](https://github.com/Kyrllan/neon-bank-clone/assets/31549101/323fa867-756e-4a8e-a3e7-a3066e5cfcde)
-
+![Captura de Tela 2023-07-25 às 08 52 57](https://github.com/Kyrllan/neon-bank-clone/assets/31549101/55922346-e1e0-4120-b02e-a91a6b10ff63)
 
 link: https://neon-bank-clone.vercel.app/
 
