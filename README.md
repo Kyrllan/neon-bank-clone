@@ -1,5 +1,8 @@
 NEON BANK CLONE
 
+![Captura de Tela 2023-07-25 às 08 49 55](https://github.com/Kyrllan/neon-bank-clone/assets/31549101/323fa867-756e-4a8e-a3e7-a3066e5cfcde)
+
+
 link: https://neon-bank-clone.vercel.app/
 
 Este projeto é um clone da aplicação web de banco digital Neon, que visa reproduzir algumas funcionalidades e características dessa plataforma financeira inovadora. O Neon é conhecido por oferecer uma experiência bancária totalmente digital, sem agências físicas, e por fornecer aos seus clientes uma interface amigável e intuitiva.
