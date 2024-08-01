@@ -21,14 +21,13 @@
           </div>
           <v-text-field
             v-model="cpf"
+            @input="formatCpf"
+            maxlength="14"
             class="open-account-field"
             label="Digite seu CPF"
             variant="outlined"
-            :rules="[rules.cpf]"
+            :rules="[cpfRules]"
             prepend-inner-icon="mdi-card-account-details-outline"
-            :append-inner-icon="
-              rules.cpf(cpf) || cpf.length <= 0 ? '' : 'mdi-alert-circle'
-            "
           >
           </v-text-field>
           <v-btn
@@ -249,17 +248,33 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, computed } from "vue";
 
 const router = useRouter();
 const cpf = ref("");
 
-const rules = {
-  cpf: (value) => {
-    if (value.length == 14) return true;
-    return "CPF inválido.";
-  },
+const cpfRules = (value) => {
+  if (!value) return "CPF inválido.";
+  if (value.length === 14) return true;
+  return "CPF inválido.";
 };
+
+function formatCpf() {
+  let value = cpf.value.replace(/\D/g, ""); // Remove all non-digit characters
+  if (value.length > 11) {
+    value = value.slice(0, 11); // Limit to 11 digits
+  }
+  if (value.length > 3) {
+    value = value.slice(0, 3) + "." + value.slice(3);
+  }
+  if (value.length > 7) {
+    value = value.slice(0, 7) + "." + value.slice(7);
+  }
+  if (value.length > 11) {
+    value = value.slice(0, 11) + "-" + value.slice(11);
+  }
+  cpf.value = value;
+}
 
 const questions = [
   {
