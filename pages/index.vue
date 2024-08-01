@@ -253,7 +253,6 @@
 import { ref } from "vue";
 
 const router = useRouter();
-
 const cpf = ref("");
 
 const rules = {
