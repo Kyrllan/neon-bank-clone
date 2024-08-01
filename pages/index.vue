@@ -4,21 +4,41 @@
       <div class="first-home-container">
         <div class="first-home-section-card">
           <div class="first-home-section-card-title">
-            <span>Neon, a conta digital feita para os brasileiros
-              <span class="highlight-text">trabalhadores</span></span>
+            <span
+              >Neon, a conta digital feita para os brasileiros
+              <span class="highlight-text">trabalhadores</span></span
+            >
           </div>
           <div class="first-home-section-card-text">
-            <span>Leve com você onde for:
-              <strong>Cartão de Crédito, Débito, Empréstimo, Investimentos,
-                Cashback</strong>
-              e muito mais!</span>
+            <span
+              >Leve com você onde for:
+              <strong
+                >Cartão de Crédito, Débito, Empréstimo, Investimentos,
+                Cashback</strong
+              >
+              e muito mais!</span
+            >
           </div>
-          <v-text-field v-model="cpf" class="open-account-field" label="Digite seu CPF" variant="outlined"
-            :rules="[rules.cpf]" v-maska data-maska="###.###.###-##" prepend-inner-icon="mdi-card-account-details-outline"
-            :append-inner-icon="rules.cpfValid(cpf) || cpf.length <= 0 ? '' : 'mdi-alert-circle'
-              ">
+          <v-text-field
+            v-model="cpf"
+            class="open-account-field"
+            label="Digite seu CPF"
+            variant="outlined"
+            v-mask="'##.###.###-##'"
+            :rules="[rules.cpf]"
+            prepend-inner-icon="mdi-card-account-details-outline"
+            :append-inner-icon="
+              rules.cpf(cpf) || cpf.length <= 0 ? '' : 'mdi-alert-circle'
+            "
+          >
           </v-text-field>
-          <v-btn variant="flat" class="open-account-btn" height="40" rounded="xl">Abra sua conta</v-btn>
+          <v-btn
+            variant="flat"
+            class="open-account-btn"
+            height="40"
+            rounded="xl"
+            >Abra sua conta</v-btn
+          >
         </div>
       </div>
     </section>
@@ -28,7 +48,7 @@
           <li>
             <div class="banner-card banner-img-1">
               <div>
-                <span class="banner-text banner-text-1">Cartão</span> <br>
+                <span class="banner-text banner-text-1">Cartão</span> <br />
                 <div class="mt-4 banner-text banner-text-1">de Crédito</div>
                 <div class="more">Saiba mais</div>
               </div>
@@ -36,8 +56,11 @@
             <div>
               <div class="banner-main-text">Mais controle</div>
               <p class="banner-main-text-1">
-                Com o <span class="banner-text-main-decoration">Cartão de Crédito</span> Neon você só paga o que gasta e
-                pode ajustar seu próprio limite.
+                Com o
+                <span class="banner-text-main-decoration"
+                  >Cartão de Crédito</span
+                >
+                Neon você só paga o que gasta e pode ajustar seu próprio limite.
               </p>
             </div>
           </li>
@@ -51,8 +74,11 @@
             <div>
               <div class="banner-main-text">Conquiste seus sonhos</div>
               <p class="banner-main-text-1">
-                O jeito Neon de fazer acontecer, te adianta um <span class="banner-text-main-decoration">empréstimo
-                  pessoal</span> com as menores taxas.
+                O jeito Neon de fazer acontecer, te adianta um
+                <span class="banner-text-main-decoration"
+                  >empréstimo pessoal</span
+                >
+                com as menores taxas.
               </p>
             </div>
           </li>
@@ -66,8 +92,11 @@
             <div>
               <div class="banner-main-text">Seu dinheiro rende</div>
               <p class="banner-main-text-1">
-                Dinheiro rendendo de verdade, com praticidade e segurança, só na Neon. <span
-                  class="banner-text-main-decoration">Faça sua simulação!</span>
+                Dinheiro rendendo de verdade, com praticidade e segurança, só na
+                Neon.
+                <span class="banner-text-main-decoration"
+                  >Faça sua simulação!</span
+                >
               </p>
             </div>
           </li>
@@ -76,15 +105,30 @@
     </section>
     <section class="third-home-section">
       <div class="pa-6">
-        <img class="banner-img" src="/assets/cartao-neon-min.webp" alt="card-img" />
+        <img
+          class="banner-img"
+          src="/assets/cartao-neon-min.webp"
+          alt="card-img"
+        />
       </div>
       <div class="pa-6">
         <div class="banner-main">
-          <div class="banner-title">Peça seu cartão Neon e juntos a gente descomplica o crédito</div>
-          <div class="banner-text">O cartão de crédito Neon é sem anuidade, você só paga o que gasta e pode ajustar seu
-            limite direto pelo
-            aplicativo.</div>
-          <v-btn @click="router.push('/bringCard')" variant="flat" class="open-account-btn" block height="40" rounded="xl">Pedir meu cartão</v-btn>
+          <div class="banner-title">
+            Peça seu cartão Neon e juntos a gente descomplica o crédito
+          </div>
+          <div class="banner-text">
+            O cartão de crédito Neon é sem anuidade, você só paga o que gasta e
+            pode ajustar seu limite direto pelo aplicativo.
+          </div>
+          <v-btn
+            @click="router.push('/bringCard')"
+            variant="flat"
+            class="open-account-btn"
+            block
+            height="40"
+            rounded="xl"
+            >Pedir meu cartão</v-btn
+          >
         </div>
       </div>
     </section>
@@ -92,25 +136,54 @@
       <div class="pa-6">
         <div class="banner-main">
           <div class="banner-title">Faça um empréstimo pessoal</div>
-          <div class="banner-text">Tá faltando dinheiro pra fechar um projeto ou realizar um sonho? Que tal simular um
-            empréstimo e ter uma ideia de quanto custaria?</div>
-          <v-btn @click="router.push('/needLoan')" variant="flat" class="open-account-btn" block height="40" rounded="xl">Simular empréstimo</v-btn>
+          <div class="banner-text">
+            Tá faltando dinheiro pra fechar um projeto ou realizar um sonho? Que
+            tal simular um empréstimo e ter uma ideia de quanto custaria?
+          </div>
+          <v-btn
+            @click="router.push('/needLoan')"
+            variant="flat"
+            class="open-account-btn"
+            block
+            height="40"
+            rounded="xl"
+            >Simular empréstimo</v-btn
+          >
         </div>
       </div>
       <div class="pa-6">
-        <img class="banner-img" src="/assets/emprestimo-min.webp" alt="card-img" />
+        <img
+          class="banner-img"
+          src="/assets/emprestimo-min.webp"
+          alt="card-img"
+        />
       </div>
     </section>
     <section class="fifth-home-section">
       <div class="pa-6">
-        <img class="banner-img" src="/assets/investimento-min.webp" alt="card-img" />
+        <img
+          class="banner-img"
+          src="/assets/investimento-min.webp"
+          alt="card-img"
+        />
       </div>
       <div class="pa-6">
         <div class="banner-main">
           <div class="banner-title">Comece a investir a partir de R$ 10</div>
-          <div class="banner-text">Juntar dinheiro e garantir seu futuro é simples na Neon. Nosso CDB é seguro, prático e
-            rende mais do que a poupança. Simule agora um investimento e descubra quanto você ganharia.</div>
-          <v-btn @click="router.push('/simulateInvestment')" variant="flat" class="open-account-btn" block height="40" rounded="xl">Simular investimento</v-btn>
+          <div class="banner-text">
+            Juntar dinheiro e garantir seu futuro é simples na Neon. Nosso CDB é
+            seguro, prático e rende mais do que a poupança. Simule agora um
+            investimento e descubra quanto você ganharia.
+          </div>
+          <v-btn
+            @click="router.push('/simulateInvestment')"
+            variant="flat"
+            class="open-account-btn"
+            block
+            height="40"
+            rounded="xl"
+            >Simular investimento</v-btn
+          >
         </div>
       </div>
     </section>
@@ -120,72 +193,92 @@
     </section>
     <section class="seventh-home-section">
       <div class="banner">
-        <div class="banner-title">
-          Tarifas e anuidade?
-          Não com a Neon!
-        </div>
+        <div class="banner-title">Tarifas e anuidade? Não com a Neon!</div>
         <div>
-          <v-btn variant="flat" class="open-account-btn" block height="40" rounded="xl">Confira os detalhes</v-btn>
+          <v-btn
+            variant="flat"
+            class="open-account-btn"
+            block
+            height="40"
+            rounded="xl"
+            >Confira os detalhes</v-btn
+          >
         </div>
       </div>
       <div class="banner">
-        <img class="banner-img" src="/assets/ilustra_gratis-min.webp" alt="gratis-img" />
-        <v-btn variant="flat" class="open-account-btn2" block height="40" rounded="xl">Confira os detalhes</v-btn>
+        <img
+          class="banner-img"
+          src="/assets/ilustra_gratis-min.webp"
+          alt="gratis-img"
+        />
+        <v-btn
+          variant="flat"
+          class="open-account-btn2"
+          block
+          height="40"
+          rounded="xl"
+          >Confira os detalhes</v-btn
+        >
       </div>
     </section>
     <section class="eighth-home-section">
       <div class="banner">
         <div class="banner-title">Ei, já conhece o nosso blog?</div>
-        <div class="banner-text">Focar no Dinheiro é saber tudo sobre finanças pessoais, economia e controle dos gastos
-          para realizar seus
-          sonhos. Vem com a gente!</div>
-        <v-btn variant="flat" class="open-account-btn" block height="40" rounded="xl">Conheça o blog</v-btn>
+        <div class="banner-text">
+          Focar no Dinheiro é saber tudo sobre finanças pessoais, economia e
+          controle dos gastos para realizar seus sonhos. Vem com a gente!
+        </div>
+        <v-btn
+          variant="flat"
+          class="open-account-btn"
+          block
+          height="40"
+          rounded="xl"
+          >Conheça o blog</v-btn
+        >
       </div>
       <div class="banner2">
         <div class="banner2-title">#Focanodinheiro</div>
-        <img class="banner2-img" src="/assets/ilustra-blog-min.webp" alt="ilustra-blog">
+        <img
+          class="banner2-img"
+          src="/assets/ilustra-blog-min.webp"
+          alt="ilustra-blog"
+        />
       </div>
     </section>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref } from "vue";
 
-const router = useRouter()
+const router = useRouter();
 
-const cpf = ref('');
+const cpf = ref("");
 
 const rules = {
   cpf: (value) => {
-    const cpfRegex = /^[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}$/;
-    if (cpfRegex.test(value)) return true;
-    return 'CPF inválido.';
-  },
-  cpfValid: (value) => {
-    const cpfRegex = /^[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}$/;
-    if (cpfRegex.test(value)) return true;
-    return false;
+    if (value.length == 13) return true;
+    return "CPF inválido.";
   },
 };
 
 const questions = [
   {
-    name: 'A Neon é um banco digital?',
+    name: "A Neon é um banco digital?",
     description: `Não, a Neon não é um banco digital, por isso não dizemos "banco Neon", apenas "Neon". A Neon é uma Instituição de Pagamento autorizada pelo Banco Central do Brasil que oferece uma conta digital via aplicativo.
     Também é possível dizer que a Neon é uma fintech, termo criado a partir da junção dos termos "financial" (financeiro) e "technology" (tecnologia), pois usamos tecnologia para promover inovação financeira.`,
-    link: 'Conheça mais sobre a Neon e a sua história.'
+    link: "Conheça mais sobre a Neon e a sua história.",
   },
   {
-    name: 'É seguro usar a conta Neon?',
+    name: "É seguro usar a conta Neon?",
     description: `A conta digital Neon é 100% segura e estamos investindo continuamente em recursos para garantir a segurança dos nossos clientes. Por exemplo, disponibilizamos um cartão virtual para compras online, temos tokens em todos os processos de validação de segurança no aplicativo, além de autenticação por selfie e por digital para ter acesso à conta.`,
   },
   {
-    name: 'Por que escolher a conta digital Neon?',
+    name: "Por que escolher a conta digital Neon?",
     description: `A Neon oferece todos os serviços financeiros que você precisa na palma da sua mão, além de ser uma conta gratuita e sem tarifas escondidas. Aqui você tem acesso ao cartão de crédito, empréstimo pessoal e consignado, investimento que rende mais do que a poupança, Viracrédito que pode aumentar o limite do seu cartão, cashback em todas as suas compras e muito mais!`,
   },
-]
-
+];
 </script>
 
 <style scoped lang="scss">
@@ -194,12 +287,11 @@ const questions = [
   color: rgb(var(--v-theme-nBlack));
   font-size: 16px;
   font-weight: bold;
-  font-family: 'Epilogue';
+  font-family: "Epilogue";
   letter-spacing: normal;
   text-transform: none;
   background-color: rgb(var(--v-theme-nYellow));
 }
-
 
 .first-home-section {
   margin-top: 80px;
@@ -239,7 +331,7 @@ const questions = [
       }
 
       .first-home-section-card-text {
-        font-family: 'Epilogue';
+        font-family: "Epilogue";
         font-weight: 500;
         margin-bottom: 24px;
         font-size: 16px;
@@ -294,13 +386,13 @@ const questions = [
           text-align: center;
           font-size: 20px;
           font-weight: bold;
-          font-family: 'Epilogue';
+          font-family: "Epilogue";
           letter-spacing: normal;
           padding-bottom: 4px;
           text-decoration: underline;
           color: #fff;
           opacity: 0;
-          transition: ease-out .2s;
+          transition: ease-out 0.2s;
         }
 
         &:hover {
@@ -314,15 +406,15 @@ const questions = [
       }
 
       .banner-img-1 {
-        background-image: url('/assets/varias-maos-segurando-cartoes-da-neon-284x282.webp');
+        background-image: url("/assets/varias-maos-segurando-cartoes-da-neon-284x282.webp");
       }
 
       .banner-img-2 {
-        background-image: url('/assets/senhor-de-idade-segurando-celular-e-cartao-neon-284x282.webp');
+        background-image: url("/assets/senhor-de-idade-segurando-celular-e-cartao-neon-284x282.webp");
       }
 
       .banner-img-3 {
-        background-image: url('/assets/homem-na-rua-olhando-para-frente-284x282.webp');
+        background-image: url("/assets/homem-na-rua-olhando-para-frente-284x282.webp");
       }
 
       .banner-text {
@@ -349,14 +441,14 @@ const questions = [
         text-align: center;
         font-size: 20px;
         font-weight: bold;
-        font-family: 'Epilogue';
+        font-family: "Epilogue";
         letter-spacing: normal;
         margin: 16px 20px;
         color: rgb(var(--v-theme-nBlack));
       }
 
       .banner-main-text-1 {
-        font-family: 'Epilogue';
+        font-family: "Epilogue";
         font-weight: 500;
         font-size: 16px;
         line-height: 24px;
@@ -369,16 +461,18 @@ const questions = [
         cursor: pointer;
       }
     }
-
   }
-
 }
 
 .third-home-section {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(247.27deg, #00fff0 -19.61%, #0f92ff 164.78%) !important;
+  background: linear-gradient(
+    247.27deg,
+    #00fff0 -19.61%,
+    #0f92ff 164.78%
+  ) !important;
   padding: 4rem 10rem;
 
   .banner-img {
@@ -607,12 +701,10 @@ const questions = [
   }
 }
 
-
 @media screen and (max-width: 3000px) {
   .background-picture {
-    background-image: url('/assets/hero-2-1920x568.webp');
+    background-image: url("/assets/hero-2-1920x568.webp");
   }
-
 }
 
 @media screen and (max-width: 1400px) {
@@ -641,14 +733,13 @@ const questions = [
   }
 
   .background-picture {
-    background-image: url('/assets/hero-2-1920x568.webp');
+    background-image: url("/assets/hero-2-1920x568.webp");
   }
 }
 
-
 @media screen and (max-width: 1024px) {
   .background-picture {
-    background-image: url('/assets/hero-2-1024x568.webp');
+    background-image: url("/assets/hero-2-1024x568.webp");
   }
 
   .first-home-section {
@@ -702,7 +793,6 @@ const questions = [
     justify-content: center;
     padding: 2rem;
 
-
     .banner {
       padding: 0 1.5rem;
     }
@@ -723,13 +813,11 @@ const questions = [
     justify-content: center;
     padding: 2rem;
   }
-
 }
 
 @media screen and (max-width: 520px) {
-
   .background-picture {
-    background-image: url('/assets/hero-2-520x610.webp');
+    background-image: url("/assets/hero-2-520x610.webp");
   }
 
   .first-home-section {
@@ -810,6 +898,5 @@ const questions = [
       }
     }
   }
-
 }
 </style>
