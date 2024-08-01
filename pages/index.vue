@@ -24,7 +24,6 @@
             class="open-account-field"
             label="Digite seu CPF"
             variant="outlined"
-            v-mask="'##.###.###-##'"
             :rules="[rules.cpf]"
             prepend-inner-icon="mdi-card-account-details-outline"
             :append-inner-icon="
@@ -257,7 +256,7 @@ const cpf = ref("");
 
 const rules = {
   cpf: (value) => {
-    if (value.length == 13) return true;
+    if (value.length == 14) return true;
     return "CPF inválido.";
   },
 };

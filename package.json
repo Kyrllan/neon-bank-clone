@@ -22,7 +22,6 @@
     "@fortawesome/vue-fontawesome": "^3.0.3",
     "@mdi/font": "^7.2.96",
     "sass": "^1.63.6",
-    "vue-the-mask": "^0.11.1",
     "vuetify": "^3.3.9"
   }
 }

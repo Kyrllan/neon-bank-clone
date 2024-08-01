@@ -17,7 +17,7 @@ export default defineNuxtConfig({
       "@fortawesome/free-brands-svg-icons",
     ],
   },
-  plugins: ["~/plugins/vue-the-mask.js"],
+  //plugins: ["~/plugins/vue-the-mask.js"],
   modules: ["@nuxtjs/google-fonts"],
   googleFonts: {
     families: {
